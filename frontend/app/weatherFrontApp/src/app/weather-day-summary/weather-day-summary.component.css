@@ -1,0 +1,38 @@
+.forecast-container{
+    line-height:1;
+    text-align:center;
+    font-weight:13px;
+    height:90px;
+    width:73px;
+    font-size: small;
+    font-family: arial,sans-serif;
+}
+.day{
+    padding-top:7px;
+    line-height:15px
+}
+.temperature-range-container{
+    font-weight:normal;
+    line-height:15px;
+    font-size:13px
+}
+.color-gray{
+    color: #bababa !important;
+}
+.padding-right-5 {
+    padding-right:5px
+}
+.color-dark-gray{
+    color: #878787 !important;
+}
+.display-inline-block{
+    display:inline-block;
+}
+.display-inline{
+    display:inline;
+}
+img{
+    margin:1px 4px 0;
+    height:48px;
+    width:48px
+}
