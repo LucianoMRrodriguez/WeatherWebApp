@@ -1,3 +1,9 @@
-<p>
-  weather-forecast-list works!
-</p>
+<div>
+  <app-weather-day-summary 
+    *ngFor="let summary of days" 
+    [forecast]="summary">
+  </app-weather-day-summary>
+  <li *ngFor="let x of d">
+    {{x}}: <img [src]="'http://l.yimg.com/a/i/us/we/52/' + x + '.gif'">
+  </li>
+</div>

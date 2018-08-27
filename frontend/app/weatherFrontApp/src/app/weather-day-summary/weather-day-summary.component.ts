@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { DayForecast } from '../domain/dayForecast';
 
 @Component({
@@ -8,16 +8,7 @@ import { DayForecast } from '../domain/dayForecast';
 })
 export class WeatherDaySummaryComponent implements OnInit {
 
-  forecast: DayForecast = {
-    state: {
-      id: 1,
-      description: "Rain"
-    },
-    date: new Date(),
-    day: "Sun",
-    highestTemperature: 13,
-    lowestTemperature: 12
-  };
+  @Input() forecast: DayForecast;
 
   constructor() { }
 
