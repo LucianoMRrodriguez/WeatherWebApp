@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { DayForecast } from '../domain/dayForecast';
+import { ForecastPlotterService} from '../services/forecast-plotter.service'
 
 @Component({
   selector: 'app-weather-day-summary',
@@ -10,16 +11,16 @@ export class WeatherDaySummaryComponent implements OnInit {
 
   @Input() forecast: DayForecast;
 
-  constructor() { }
+  constructor(private forecastPlotter:ForecastPlotterService) { }
 
   ngOnInit() {
   }
 
   get imgSrc() {
-    return '//ssl.gstatic.com/onebox/weather/48/' 
-      + this.forecast.state.description
-          .toLowerCase()
-          .replace(' ','_') 
-      + '.png'
+    let src = '../../assets/img/' 
+                + this.forecastPlotter.getImgName(this.forecast.state.id)
+                + '.png';
+    console.log(src);
+    return src;
   }
 }

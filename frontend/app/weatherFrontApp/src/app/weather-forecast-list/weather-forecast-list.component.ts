@@ -10,16 +10,10 @@ import { WEEK_FORECAST } from '../services/mockers/weekForecast';
 export class WeatherForecastListComponent implements OnInit {
 
   days: DayForecast[]
-  d: number [] = []
+
   constructor() { }
 
   ngOnInit() {
     this.days = WEEK_FORECAST
-    let i = 0;
-    while (i < 49) {
-      this.d.push(i);
-      i++;
-    };
   }
-
 }
