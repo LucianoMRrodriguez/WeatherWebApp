@@ -1,4 +1,4 @@
-import { WeatherState } from "./weatherState";
+import { WeatherState } from './weatherState';
 
 export class DayForecast {
     state: WeatherState;

@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { WeatherDaySummaryComponent } from './weather-day-summary/weather-day-summary.component';
 import { WeatherForecastListComponent } from './weather-forecast-list/weather-forecast-list.component';
 import { WeatherLocationCardComponent } from './weather-location-card/weather-location-card.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { WeatherLocationCardComponent } from './weather-location-card/weather-lo
     WeatherLocationCardComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { WeatherLocation } from '../domain/weatherLocation';
+import { Component, OnInit, Input } from '@angular/core';
+import { LocationForecast } from '../domain/locationForecast';
 
 @Component({
     selector: 'app-weather-location-card',
@@ -9,9 +9,7 @@ import { WeatherLocation } from '../domain/weatherLocation';
 
 export class WeatherLocationCardComponent implements OnInit {
 
-    location: WeatherLocation = {
-        name: 'Buenos Aires'
-    };
+    @Input() locationForecast: LocationForecast;
 
     constructor() { }
 
