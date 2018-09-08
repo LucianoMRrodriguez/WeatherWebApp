@@ -11,8 +11,15 @@ public class BoardResourceAssembler implements ResourceAssembler<Board, Resource
 
     @Override
     public Resource<Board> toResource(Board entity) {
-        return new Resource<Board>(entity,
-            linkTo(methodOn(BoardsController.class, entity.getId()).one(entity.getId())).withSelfRel(),
-            linkTo(methodOn(BoardsController.class).all()).withRel("boards"));
+        return 
+            new Resource<Board>(entity,
+                linkTo(
+                    methodOn(BoardsController.class, entity.getId())
+                        .one(entity.getId()))
+                        .withSelfRel(),
+                linkTo(
+                    methodOn(BoardsController.class)
+                        .all())
+                        .withRel("boards"));
     }
 }

@@ -1,17 +1,12 @@
 package com.lrodriguez.weather.domain;
 
-import static org.springframework.hateoas.mvc.ControllerLinkBuilder.*;
-
-import java.net.URI;
-import java.net.URISyntaxException;
+import com.lrodriguez.weather.utils.UriHelper;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.hateoas.Resource;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -30,30 +25,27 @@ public class BoardsController {
     private BoardResourceAssembler assembler;
 
     @PostMapping
-    public Mono<?> newBoard(@RequestBody Board b) throws URISyntaxException{
-        return repository.save(b)
-            .map(assembler::toResource)
-            .map( i -> {
-                    try {
-                        return ResponseEntity.created(new URI(i.getId().expand().getHref())).body(i);
-                    } catch (URISyntaxException e) {
-                        e.printStackTrace();
-                        return Mono.empty();
-                    }
-                });
+    public Mono<?> newBoard(@RequestBody Board b) {
+        return 
+            repository.save(b)
+                      .map(assembler::toResource)
+                      .map(i -> ResponseEntity.created(UriHelper.createUri(i))
+                                              .body(i));
     }
 
-    @GetMapping(path="/{id}")
+    @GetMapping(path = "/{id}")
     public Mono<?> one(@PathVariable String id) {
-        return repository.findById(id)
-            .map(assembler::toResource)
-            .map(ResponseEntity::ok);
+        return
+            repository.findById(id)
+                      .map(assembler::toResource)
+                      .map(ResponseEntity::ok);
     }
 
     @GetMapping
     public Flux<?> all() {
-        return repository.findAll()
-            .map(assembler::toResource)
-            .map(ResponseEntity::ok);
+        return 
+            repository.findAll()
+                      .map(assembler::toResource)
+                      .map(ResponseEntity::ok);
     }
 }
