@@ -2,6 +2,7 @@ package com.lrodriguez.weather.domain;
 
 import java.util.Map;
 
+import com.lrodriguez.weather.thirdparty.YahooService;
 import com.lrodriguez.weather.utils.UriHelper;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +33,10 @@ public class BoardsController {
 
     @Autowired
     private SubscriptionService subsService;
+
+    @Autowired
+    private YahooService yahoo;
+
     @PostMapping
     public Mono<?> newBoard(@RequestBody Board b) {
         return 
@@ -72,5 +77,10 @@ public class BoardsController {
                 .flatMap(repository::save)
                 .map(assembler::toResource)
                 .map(ResponseEntity::ok);
+    }
+
+    @GetMapping(path="/locations/{id}")
+    public void getone(@PathVariable String id) {
+        yahoo.findOne(id);
     }
 }

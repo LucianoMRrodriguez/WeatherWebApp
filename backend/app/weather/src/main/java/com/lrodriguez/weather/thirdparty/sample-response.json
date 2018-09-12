@@ -1,0 +1,299 @@
+{
+    "query": {
+     "count": 3,
+     "created": "2018-09-12T04:16:41Z",
+     "lang": "es-419",
+     "results": {
+      "channel": [
+       {
+        "units": {
+         "distance": "mi",
+         "pressure": "in",
+         "speed": "mph",
+         "temperature": "F"
+        }
+       },
+       {
+        "units": {
+         "distance": "mi",
+         "pressure": "in",
+         "speed": "mph",
+         "temperature": "F"
+        },
+        "title": "Yahoo! Weather - Greenland, AR, US",
+        "link": "http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-2414369/",
+        "description": "Yahoo! Weather for Greenland, AR, US",
+        "language": "en-us",
+        "lastBuildDate": "Tue, 11 Sep 2018 11:16 PM CDT",
+        "ttl": "60",
+        "location": {
+         "city": "Greenland",
+         "country": "United States",
+         "region": " AR"
+        },
+        "wind": {
+         "chill": "64",
+         "direction": "150",
+         "speed": "11"
+        },
+        "atmosphere": {
+         "humidity": "88",
+         "pressure": "969.0",
+         "rising": "0",
+         "visibility": "16.1"
+        },
+        "astronomy": {
+         "sunrise": "6:56 am",
+         "sunset": "7:30 pm"
+        },
+        "image": {
+         "title": "Yahoo! Weather",
+         "width": "142",
+         "height": "18",
+         "link": "http://weather.yahoo.com",
+         "url": "http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif"
+        },
+        "item": {
+         "title": "Conditions for Greenland, AR, US at 10:00 PM CDT",
+         "lat": "35.996239",
+         "long": "-94.173843",
+         "link": "http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-2414369/",
+         "pubDate": "Tue, 11 Sep 2018 10:00 PM CDT",
+         "condition": {
+          "code": "29",
+          "date": "Tue, 11 Sep 2018 10:00 PM CDT",
+          "temp": "65",
+          "text": "Partly Cloudy"
+         },
+         "forecast": [
+          {
+           "code": "30",
+           "date": "11 Sep 2018",
+           "day": "Tue",
+           "high": "80",
+           "low": "54",
+           "text": "Partly Cloudy"
+          },
+          {
+           "code": "4",
+           "date": "12 Sep 2018",
+           "day": "Wed",
+           "high": "80",
+           "low": "59",
+           "text": "Thunderstorms"
+          },
+          {
+           "code": "34",
+           "date": "13 Sep 2018",
+           "day": "Thu",
+           "high": "85",
+           "low": "65",
+           "text": "Mostly Sunny"
+          },
+          {
+           "code": "47",
+           "date": "14 Sep 2018",
+           "day": "Fri",
+           "high": "84",
+           "low": "67",
+           "text": "Scattered Thunderstorms"
+          },
+          {
+           "code": "47",
+           "date": "15 Sep 2018",
+           "day": "Sat",
+           "high": "85",
+           "low": "68",
+           "text": "Scattered Thunderstorms"
+          },
+          {
+           "code": "34",
+           "date": "16 Sep 2018",
+           "day": "Sun",
+           "high": "85",
+           "low": "65",
+           "text": "Mostly Sunny"
+          },
+          {
+           "code": "32",
+           "date": "17 Sep 2018",
+           "day": "Mon",
+           "high": "85",
+           "low": "65",
+           "text": "Sunny"
+          },
+          {
+           "code": "47",
+           "date": "18 Sep 2018",
+           "day": "Tue",
+           "high": "84",
+           "low": "67",
+           "text": "Scattered Thunderstorms"
+          },
+          {
+           "code": "47",
+           "date": "19 Sep 2018",
+           "day": "Wed",
+           "high": "81",
+           "low": "65",
+           "text": "Scattered Thunderstorms"
+          },
+          {
+           "code": "30",
+           "date": "20 Sep 2018",
+           "day": "Thu",
+           "high": "80",
+           "low": "63",
+           "text": "Partly Cloudy"
+          }
+         ],
+         "description": "<![CDATA[<img src=\"http://l.yimg.com/a/i/us/we/52/29.gif\"/>\n<BR />\n<b>Current Conditions:</b>\n<BR />Partly Cloudy\n<BR />\n<BR />\n<b>Forecast:</b>\n<BR /> Tue - Partly Cloudy. High: 80Low: 54\n<BR /> Wed - Thunderstorms. High: 80Low: 59\n<BR /> Thu - Mostly Sunny. High: 85Low: 65\n<BR /> Fri - Scattered Thunderstorms. High: 84Low: 67\n<BR /> Sat - Scattered Thunderstorms. High: 85Low: 68\n<BR />\n<BR />\n<a href=\"http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-2414369/\">Full Forecast at Yahoo! Weather</a>\n<BR />\n<BR />\n<BR />\n]]>",
+         "guid": {
+          "isPermaLink": "false"
+         }
+        }
+       },
+       {
+        "units": {
+         "distance": "mi",
+         "pressure": "in",
+         "speed": "mph",
+         "temperature": "F"
+        },
+        "title": "Yahoo! Weather - Greenland, NH, US",
+        "link": "http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-2414362/",
+        "description": "Yahoo! Weather for Greenland, NH, US",
+        "language": "en-us",
+        "lastBuildDate": "Wed, 12 Sep 2018 12:16 AM EDT",
+        "ttl": "60",
+        "location": {
+         "city": "Greenland",
+         "country": "United States",
+         "region": " NH"
+        },
+        "wind": {
+         "chill": "66",
+         "direction": "90",
+         "speed": "4"
+        },
+        "atmosphere": {
+         "humidity": "94",
+         "pressure": "1019.0",
+         "rising": "0",
+         "visibility": "12.0"
+        },
+        "astronomy": {
+         "sunrise": "6:20 am",
+         "sunset": "6:59 pm"
+        },
+        "image": {
+         "title": "Yahoo! Weather",
+         "width": "142",
+         "height": "18",
+         "link": "http://weather.yahoo.com",
+         "url": "http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif"
+        },
+        "item": {
+         "title": "Conditions for Greenland, NH, US at 11:00 PM EDT",
+         "lat": "43.038719",
+         "long": "-70.8479",
+         "link": "http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-2414362/",
+         "pubDate": "Tue, 11 Sep 2018 11:00 PM EDT",
+         "condition": {
+          "code": "26",
+          "date": "Tue, 11 Sep 2018 11:00 PM EDT",
+          "temp": "66",
+          "text": "Cloudy"
+         },
+         "forecast": [
+          {
+           "code": "12",
+           "date": "12 Sep 2018",
+           "day": "Wed",
+           "high": "67",
+           "low": "63",
+           "text": "Rain"
+          },
+          {
+           "code": "11",
+           "date": "13 Sep 2018",
+           "day": "Thu",
+           "high": "73",
+           "low": "61",
+           "text": "Showers"
+          },
+          {
+           "code": "30",
+           "date": "14 Sep 2018",
+           "day": "Fri",
+           "high": "73",
+           "low": "60",
+           "text": "Partly Cloudy"
+          },
+          {
+           "code": "30",
+           "date": "15 Sep 2018",
+           "day": "Sat",
+           "high": "76",
+           "low": "58",
+           "text": "Partly Cloudy"
+          },
+          {
+           "code": "34",
+           "date": "16 Sep 2018",
+           "day": "Sun",
+           "high": "78",
+           "low": "60",
+           "text": "Mostly Sunny"
+          },
+          {
+           "code": "34",
+           "date": "17 Sep 2018",
+           "day": "Mon",
+           "high": "82",
+           "low": "63",
+           "text": "Mostly Sunny"
+          },
+          {
+           "code": "30",
+           "date": "18 Sep 2018",
+           "day": "Tue",
+           "high": "76",
+           "low": "67",
+           "text": "Partly Cloudy"
+          },
+          {
+           "code": "47",
+           "date": "19 Sep 2018",
+           "day": "Wed",
+           "high": "76",
+           "low": "63",
+           "text": "Scattered Thunderstorms"
+          },
+          {
+           "code": "39",
+           "date": "20 Sep 2018",
+           "day": "Thu",
+           "high": "65",
+           "low": "54",
+           "text": "Scattered Showers"
+          },
+          {
+           "code": "30",
+           "date": "21 Sep 2018",
+           "day": "Fri",
+           "high": "63",
+           "low": "50",
+           "text": "Partly Cloudy"
+          }
+         ],
+         "description": "<![CDATA[<img src=\"http://l.yimg.com/a/i/us/we/52/26.gif\"/>\n<BR />\n<b>Current Conditions:</b>\n<BR />Cloudy\n<BR />\n<BR />\n<b>Forecast:</b>\n<BR /> Wed - Rain. High: 67Low: 63\n<BR /> Thu - Showers. High: 73Low: 61\n<BR /> Fri - Partly Cloudy. High: 73Low: 60\n<BR /> Sat - Partly Cloudy. High: 76Low: 58\n<BR /> Sun - Mostly Sunny. High: 78Low: 60\n<BR />\n<BR />\n<a href=\"http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-2414362/\">Full Forecast at Yahoo! Weather</a>\n<BR />\n<BR />\n<BR />\n]]>",
+         "guid": {
+          "isPermaLink": "false"
+         }
+        }
+       }
+      ]
+     }
+    }
+   }
