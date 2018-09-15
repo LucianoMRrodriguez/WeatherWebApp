@@ -1,5 +1,10 @@
 <div class="container">
-    <span class="box-title">{{ locationForecast.location.name }}</span>
-    <app-weather-forecast-list></app-weather-forecast-list>
+  <div class="row justify-content-center">
+    <div class="col">
+      <div class="card-container margin-bottom-5">
+        <span class="box-title">{{ locationForecast.location.name }}</span>
+        <app-weather-forecast-list [days]="locationForecast.forecast"></app-weather-forecast-list>
+      </div>
+    </div>
+  </div>
 </div>
-

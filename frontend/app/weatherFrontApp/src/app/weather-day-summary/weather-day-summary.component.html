@@ -3,7 +3,9 @@
           {{forecast.day}}
         </div>
         <div class="display-inline-block">
-          <img  
+          <img
+            draggable="false"
+            (dragstart)="false;"
             [alt]="forecast.state.description" 
             [src]="imgSrc">
         </div>

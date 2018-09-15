@@ -20,7 +20,6 @@ export class WeatherDaySummaryComponent implements OnInit {
     const src = '../../assets/img/'
                 + this.forecastPlotter.getImgName(this.forecast.state.id)
                 + '.png';
-    console.log(src);
     return src;
   }
 }

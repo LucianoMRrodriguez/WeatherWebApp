@@ -1,7 +1,7 @@
-.container {
+.card-container {
     padding: 20px 16px 24px 16px;
-    margin: 0 20% 10px 20%;
     background-color: white;
+    max-width: 550px;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
 }
 
@@ -10,4 +10,8 @@
     font-weight: lighter !important;
     color: #878787 !important;
     font-family: arial,sans-serif;
+}
+
+.margin-bottom-5 {
+    margin-bottom: 5px
 }

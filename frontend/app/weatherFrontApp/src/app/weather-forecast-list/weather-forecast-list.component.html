@@ -1,6 +1,14 @@
 <div>
-  <app-weather-day-summary 
-    *ngFor="let summary of days" 
-    [forecast]="summary">
-  </app-weather-day-summary>
+  <ngu-carousel #carousel
+    [inputs]="carouselConfig"
+    [dataSource]="days">
+    <ngu-tile *nguCarouselDef="let summary; let i = index">
+      <app-weather-day-summary 
+        [forecast]="summary">
+      </app-weather-day-summary>
+    </ngu-tile>
+    <button NguCarouselPrev class="display-none"></button>
+	<button NguCarouselNext class="display-none"></button>
+  </ngu-carousel>
+  
 </div>

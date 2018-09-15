@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { DayForecast } from '../domain/dayForecast';
 import { WEEK_FORECAST } from '../services/mockers/weekForecast';
+import { NguCarouselConfig } from '@ngu/carousel';
 
 @Component({
   selector: 'app-weather-forecast-list',
@@ -9,11 +10,22 @@ import { WEEK_FORECAST } from '../services/mockers/weekForecast';
 })
 export class WeatherForecastListComponent implements OnInit {
 
-  days: DayForecast[];
+  @Input() days: DayForecast[];
+
+  public carouselConfig: NguCarouselConfig = {
+    grid: { xs: 5, sm: 5, md: 5, lg: 5, all: 0 },
+    slide: 2,
+    speed: 500,
+    point: {
+      visible: false
+    },
+    load: 2,
+    velocity: 0,
+    touch: true,
+    easing: 'cubic-bezier(0, 0, 0.2, 1)'
+  };
 
   constructor() { }
 
-  ngOnInit() {
-    this.days = WEEK_FORECAST;
-  }
+  ngOnInit() { }
 }
