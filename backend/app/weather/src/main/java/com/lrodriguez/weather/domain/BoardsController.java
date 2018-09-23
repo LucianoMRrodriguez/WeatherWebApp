@@ -7,6 +7,7 @@ import com.lrodriguez.weather.utils.UriHelper;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/api/boards")
 public class BoardsController {
@@ -30,9 +32,6 @@ public class BoardsController {
 
     @Autowired
     private BoardResourceAssembler assembler;
-
-    @Autowired
-    private SubscriptionService subsService;
 
     @Autowired
     private YahooService yahoo;
@@ -49,7 +48,7 @@ public class BoardsController {
     @GetMapping(path = "/{id}")
     public Mono<?> one(@PathVariable String id) {
         return
-            repository.findById(id)
+            repository.findByOwnerGoogleId(id)
                       .map(assembler::toResource)
                       .map(ResponseEntity::ok);
     }

@@ -4,8 +4,6 @@ import java.util.List;
 
 import com.lrodriguez.weather.domain.Location;
 
-import org.springframework.http.client.ClientHttpRequest;
-import org.springframework.http.client.ClientHttpResponse;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;

@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { WeatherDaySummaryComponent } from './weather-day-summary/weather-day-summary.component';
@@ -20,7 +21,8 @@ import { NguCarouselModule } from '@ngu/carousel';
     BrowserModule,
     BrowserAnimationsModule,
     NgbModule,
-    NguCarouselModule
+    NguCarouselModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
