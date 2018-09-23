@@ -5,9 +5,9 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - ./app/weather:/app/weather
+      - ./backend/app/weather:/app/weather
     working_dir: /app/weather
-    container_name: backcontainer
+    container_name: backend
     links:
       - mongodb
     depends_on:
@@ -24,3 +24,13 @@ services:
     ports:
       - 27017:27017
     command: mongod --smallfiles --logpath=/dev/null
+  frontend:
+    build:
+      context: ./frontend
+    container_name: frontend
+    volumes:
+      - ./frontend/app/weatherFrontApp:/app
+    ports:
+      - 4200:4200
+    working_dir: /app
+    command: npm run start-docker
