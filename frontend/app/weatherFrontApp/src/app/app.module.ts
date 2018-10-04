@@ -16,6 +16,9 @@ import { SearchViewComponent } from './search-view/search-view.component';
 import { ProfileComponent } from './profile/profile.component';
 import { FormsModule } from '@angular/forms';
 import { FollowButtonComponent } from './follow-button/follow-button.component';
+import { AppRoutingModule } from './/app-routing.module';
+import { LoginViewComponent } from './login-view/login-view.component';
+import { MainViewComponent } from './main-view/main-view.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,9 @@ import { FollowButtonComponent } from './follow-button/follow-button.component';
     BoardComponent,
     SearchViewComponent,
     ProfileComponent,
-    FollowButtonComponent
+    FollowButtonComponent,
+    LoginViewComponent,
+    MainViewComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +42,8 @@ import { FollowButtonComponent } from './follow-button/follow-button.component';
     HttpClientModule,
     MatTabsModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

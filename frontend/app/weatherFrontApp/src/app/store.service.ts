@@ -6,6 +6,9 @@ import { Injectable } from '@angular/core';
 export class StoreService {
 
   following: Set<string> = new Set<string>();
+  public get userId(): string {
+    return localStorage.getItem('userId');
+  }
   constructor() { }
 
   addLocation(code: string) {
@@ -18,7 +21,16 @@ export class StoreService {
     }
   }
 
-  isLocationFollowed(code: string) {
+  isLocationFollowed(code: string): Boolean {
     return this.following.has(code);
+  }
+
+  setUserId(id: string) {
+    console.log(id);
+    localStorage.setItem('userId', id);
+  }
+
+  isLoggedIn(): Boolean {
+    return !!this.userId;
   }
 }
