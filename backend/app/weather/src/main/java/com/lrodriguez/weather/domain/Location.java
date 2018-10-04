@@ -1,6 +1,7 @@
 package com.lrodriguez.weather.domain;
 
-import java.util.Date;
+import java.time.LocalDateTime;
+import java.util.List;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -21,6 +22,6 @@ public class Location {
     private String city;
     private String country;
     private String region;
-    private SimpleForecast[] nextWeek;
-    private Date lastUpdate;
+    private List<SimpleForecast> nextWeek;
+    private LocalDateTime lastUpdate;
 }

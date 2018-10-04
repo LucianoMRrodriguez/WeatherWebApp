@@ -2,6 +2,7 @@ package com.lrodriguez.weather.domain;
 
 import java.util.Map;
 
+import com.lrodriguez.weather.thirdparty.WeatherService;
 import com.lrodriguez.weather.thirdparty.YahooService;
 import com.lrodriguez.weather.utils.UriHelper;
 
@@ -34,8 +35,8 @@ public class BoardsController {
     private BoardResourceAssembler assembler;
 
     @Autowired
-    private YahooService yahoo;
-
+    private WeatherService yahooService;
+    
     @PostMapping
     public Mono<?> newBoard(@RequestBody Board b) {
         return 
@@ -65,12 +66,14 @@ public class BoardsController {
     public Mono<?> subscribe(@RequestBody Map<String,String> req, @PathVariable String id) { 
         Mono<Location> monoLocation = Mono.just(req.get("locationCode"))
                                           .flatMap(locationRepository::findByCode)
-                                          .switchIfEmpty(Mono.just(new Location()));
+                                          .switchIfEmpty(yahooService.findOne(req.get("locationCode")))
+                                          .defaultIfEmpty(null);
 
         Mono<Board> monoBoard = repository.findById(id);
         
         return 
             Mono.zip(monoBoard,monoLocation)
+                .filter(t -> t.getT2() != null)
                 .map( t -> t.getT1()
                             .addSubscription(Mono.just(t.getT2())))
                 .flatMap(repository::save)
@@ -78,8 +81,4 @@ public class BoardsController {
                 .map(ResponseEntity::ok);
     }
 
-    @GetMapping(path="/locations/{id}")
-    public void getone(@PathVariable String id) {
-        yahoo.findOne(id);
-    }
 }

@@ -1,6 +1,9 @@
 export class Location {
-    name: string;
-    constructor(locationName: string) {
-        this.name = locationName;
-    }
+
+  constructor(
+    public city: string,
+    public country: string,
+    public region: string,
+    public code: string
+  ) {  }
 }

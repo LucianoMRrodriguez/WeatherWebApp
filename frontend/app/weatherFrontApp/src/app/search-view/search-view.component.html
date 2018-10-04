@@ -1,0 +1,6 @@
+<div class="d-flex flex-column align-items-center">
+    <h2>Search location</h2>
+    <input type="text" [(ngModel)]="name">
+    <button (click)="search()">Buscar</button>
+    <app-weather-location-card *ngFor="let loc of searchResult | async" [locationForecast]="loc"></app-weather-location-card>
+</div>
