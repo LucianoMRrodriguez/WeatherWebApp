@@ -1,5 +1,8 @@
 package com.lrodriguez.weather.domain;
 
+import java.time.Duration;
+
+import com.lrodriguez.weather.thirdparty.WeatherService;
 import com.lrodriguez.weather.utils.UriHelper;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +13,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import reactor.core.publisher.Flux;
@@ -26,6 +30,9 @@ public class LocationsController {
     @Autowired
     private LocationResourceAssembler assembler;
 
+    @Autowired
+    private WeatherService yahooService;
+
     @PostMapping
     public Mono<?> newLocation(@RequestBody Location l) {
         return
@@ -36,11 +43,17 @@ public class LocationsController {
     }
 
     @GetMapping
-    public Flux<?> all() {
-        return
-            repository.findAll()
-                      .map(assembler::toResource)
-                      .map(ResponseEntity::ok);
+    public Flux<?> all(@RequestParam(value="name", required=false) String name) {
+        if( name != null) {
+            return yahooService.findAll(name)
+                               .map(ResponseEntity::ok)
+                               .delayElements(Duration.ofSeconds(2));   
+        }
+        else {
+            return repository.findAll()
+                             .map(assembler::toResource)
+                             .map(ResponseEntity::ok);   
+        }
     }
     
     @GetMapping(path= "/{id}")

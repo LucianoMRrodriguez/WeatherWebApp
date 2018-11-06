@@ -2,7 +2,16 @@
   <div class="row justify-content-center">
     <div class="col">
       <div class="card-container margin-bottom-5">
-        <span class="box-title">{{ locationForecast.location.name }}</span>
+        <span class="box-title">
+          {{ locationForecast.location.city }},
+          {{ locationForecast.location.country }},
+          {{ locationForecast.location.region }}
+        </span>
+        <app-follow-button 
+          [followed]="isLocationFollowed()"
+          (follow)="handleFollow()"
+          (unfollow)="handleUnfollow()">
+        </app-follow-button>
         <app-weather-forecast-list [days]="locationForecast.forecast"></app-weather-forecast-list>
       </div>
     </div>

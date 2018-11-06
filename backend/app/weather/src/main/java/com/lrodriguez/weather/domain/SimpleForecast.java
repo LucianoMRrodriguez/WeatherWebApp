@@ -1,6 +1,6 @@
 package com.lrodriguez.weather.domain;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 public class SimpleForecast {
 
     private int code;
-    private Date when;
+    private LocalDate when;
     private String dayOfTheWeek;
     private Temperature highest;
     private Temperature lowest;
